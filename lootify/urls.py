@@ -23,4 +23,4 @@ if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # ✅ Set custom handler for 404 errors
-handler404 = custom_404
+handler404 = 'lootify.urls.custom_404'  # ✅ Fix: Use string reference to function

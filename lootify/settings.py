@@ -26,8 +26,9 @@ SECRET_KEY = 'django-insecure-=h2er^+*#_1cr6ce!2qk_83vi&zvs&*x4d9tp!uv=k_ji+q^09
 DEBUG = False
 #ALLOWED_HOSTS = ["loot-v6zf.onrender.com"]
 
-ALLOWED_HOSTS = ['*']
-CORS_ALLOW_ALL_ORIGINS=True
+#ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['loot-v6zf.onrender.com', '127.0.0.1']
+CORS_ALLOW_ALL_ORIGINS = True
 
 
 # Application definition
@@ -50,9 +51,11 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
+DATA_UPLOAD_MAX_MEMORY_SIZE = 52428800 
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

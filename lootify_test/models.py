@@ -1,14 +1,21 @@
-from djongo import models  
+# from djongo import models  
+
+# class Song(models.Model):
+#     title = models.CharField(max_length=255)
+#     artist = models.CharField(max_length=255)
+    
+#     image = models.ImageField(upload_to='images/')
+#     audio = models.FileField(upload_to='songs/')
+from django.db import models
 
 class Song(models.Model):
     title = models.CharField(max_length=255)
     artist = models.CharField(max_length=255)
-    
     image = models.ImageField(upload_to='images/')
-    audio = models.FileField(upload_to='songs/')
+    audio = models.FileField(upload_to='audio/')
 
-    #image = models.CharField(max_length=500)  
-    #audio = models.CharField(max_length=500) 
+
+    
 
     def __str__(self):
         return self.title
